@@ -1,0 +1,2 @@
+class TurfDetail < ApplicationRecord
+end

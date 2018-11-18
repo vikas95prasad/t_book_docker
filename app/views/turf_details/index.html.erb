@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Turf Details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @turf_details.each do |turf_detail| %>
+      <tr>
+        <td><%= turf_detail.title %></td>
+        <td><%= turf_detail.address %></td>
+        <td><%= link_to 'Show', turf_detail %></td>
+        <td><%= link_to 'Edit', edit_turf_detail_path(turf_detail) %></td>
+        <td><%= link_to 'Destroy', turf_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Turf Detail', new_turf_detail_path %>
